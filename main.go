@@ -64,13 +64,6 @@ func main() {
 
 			//移动文件
 			syscall.Rename(path, targetfilePath)
-
-			//创建原文件,这里不需要了，因为重启nginx后会自动生成滴
-			// nFile,errCreate := os.Create(path)
-			// if errCreate != nil {
-			// 	fmt.Println("create file faild:"+errCreate.Error())
-			// }
-			// defer nFile.Close()
 		}
 		return nil
 	})
